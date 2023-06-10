@@ -1,0 +1,28 @@
+Para el desarrollo de esta Api REST los pasos que segui fueron los siguientes:
+
+1- Primero cree el archivo index.js en la cual se configura la aplicacion, se
+inicializa el servidor y se gestionan las rutas.
+2- Segundo cree una carpeta routes en la cual incluí todos los archivos de 
+enrutamiento. La carpeta contiene 3 archivos ( book-routes.js - 
+library-routes.js - users-routes.js ). En estos archivos se encuentran todos
+los endpoints de la Api.
+3- Despues cree una carpeta controllers en la cual estan los 3 controllers
+que manejan la respuesta de la Api y no tienen logica de negocio ( 
+book-controller.js - library-controller.js - user-controller.js ).
+4- Luego cree la carpeta service que contiene toda la logica de negocio. Esta
+carpeta contiene 3 archivos ( book-service.js - library-service.js - 
+users-service.js ). Aqui estan todos los metodos que van a ser llamados por los
+controllers.
+5- Despues cree la carpeta db en donde se encuentra el archivo 
+sequelize-config.js el cual contiene la configuracion para realizar la conexion
+con la base de datos relacional.
+6- Posteriormente cree la carpeta models que contiene 3 archivos 
+( book-model.js - library-model.js - user-model.js ) los cuales contienen la 
+definicion de todos los modelos del orm.
+7- Despues cree la carpeta middlewares la cual contiene dos archivos 
+( error-handler.js - authentication.js ) utilizados para manejar excepciones y
+autenticacion de los diferentes endpoints respectivamente.
+8- Por ultimo cree la carpeta auth que contiene 2 archivos ( passport-config.js 
+- auth.js ) en los cuales configure la estrategia utilizada para la 
+autenticacion de los distintos endpoints e importe la misma en el archivo
+auth.js.
